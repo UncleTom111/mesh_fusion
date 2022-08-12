@@ -2,6 +2,7 @@ import os
 import argparse
 import ntpath
 import common
+import pymeshlab
 
 class Simplification:
     """
@@ -53,12 +54,22 @@ class Simplification:
         common.makedir(self.options.out_dir)
         files = self.read_directory(self.options.in_dir)
 
+#         for filepath in files:
+#             os.system('meshlabserver -i %s -o %s -s %s' % (
+#                 filepath,
+#                 os.path.join(self.options.out_dir, ntpath.basename(filepath)),
+#                 self.simplification_script
+#             ))
+
         for filepath in files:
-            os.system('meshlabserver -i %s -o %s -s %s' % (
-                filepath,
-                os.path.join(self.options.out_dir, ntpath.basename(filepath)),
-                self.simplification_script
-            ))
+            ms = pymeshlab.MeshSet()
+            # load the input
+            ms.load_new_mesh(filepath)
+            # Load and aplly the filter script
+            ms.load_filter_script(self.simplification_script)
+            ms.apply_filter_script()
+            # create and save the output
+            ms.save_current_mesh(os.path.join(self.options.out_dir, ntpath.basename(filepath))) 
 
 if __name__ == '__main__':
     app = Simplification()
