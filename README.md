@@ -1,4 +1,4 @@
-# mesh_fusion
+# Tutorial: Install and run *mesh_fusion* on a local PC
 modified mesh fusion for personal use
 
 Source: https://github.com/davidstutz/mesh-fusion
@@ -6,11 +6,11 @@ Source: https://github.com/davidstutz/mesh-fusion
 # Step 0 -- Create a python 3.7 environment
 create an environment
 ```
-conda create -n env_name python=3.7.4
+conda create -n environment_name python=3.7.4
 ```
 activate the environment
 ```
-conda activate env_name
+conda activate environment_name
 ```
 # Step 1 -- Basic Installation
 ## Install *glut* and *opengl*
