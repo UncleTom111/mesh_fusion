@@ -1,4 +1,4 @@
-# Tutorial: Install and run *mesh_fusion* on a local PC
+# Tutorial: Install and run *mesh_fusion* on a local PC (Ubuntu20.04)
 modified mesh fusion for personal use
 
 Source: https://github.com/davidstutz/mesh-fusion
