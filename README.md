@@ -67,7 +67,7 @@ cd ..
 !!!! The name of  generated ```.so``` files are various in different PC and environment. !!!!
 - Step 1 -- find thsese ```.so``` files under directories ***librender*** and ***libfusiongpu***
 - Step 2 -- change the file name below according to the ```.so``` files you found
-example: ```pyrender.cpython-38-x86_64-linux-gnu.so```
+- example: ```pyrender.cpython-38-x86_64-linux-gnu.so```
 ```
 cp -i ./librender/pyrender.cpython-37m-x86_64-linux-gnu.so ./pyrender.so
 cp -i ./libfusiongpu/cyfusion.cpython-37m-x86_64-linux-gnu.so ./cyfusion.so
